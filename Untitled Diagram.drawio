@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.1">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="3452" dy="2474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2327" dy="1915" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -58,6 +58,12 @@
         </mxCell>
         <mxCell id="HuYdQWlDdihzWlvmT8ts-24" value="High Level Diagram" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="-50" y="-50" width="1270" height="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-26" value="/send_sms" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="60" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-27" value="POST: JSON Data&lt;div style=&quot;font-size: 16px;&quot;&gt;- id&lt;div style=&quot;font-size: 16px;&quot;&gt;- phone_number&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;- amount&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;- winner_announced&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="HuYdQWlDdihzWlvmT8ts-26">
+          <mxGeometry x="10" y="50" width="170" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
