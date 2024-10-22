@@ -56,7 +56,7 @@
         <mxCell id="HuYdQWlDdihzWlvmT8ts-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HuYdQWlDdihzWlvmT8ts-17" target="HuYdQWlDdihzWlvmT8ts-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="HuYdQWlDdihzWlvmT8ts-24" value="Container" style="swimlane;" vertex="1" parent="1">
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-24" value="High Level Diagram" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="-50" y="-50" width="1270" height="1380" as="geometry" />
         </mxCell>
       </root>
