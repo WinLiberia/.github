@@ -11,7 +11,7 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="680" y="290" />
-              <mxPoint x="440" y="290" />
+              <mxPoint x="485" y="290" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -36,10 +36,25 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="HuYdQWlDdihzWlvmT8ts-8" value="SQLAlchemy ORM " style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="320" width="290" height="200" as="geometry" />
+          <mxGeometry x="340" y="340" width="290" height="200" as="geometry" />
         </mxCell>
         <mxCell id="HuYdQWlDdihzWlvmT8ts-10" value="PhoneNumber Model:&lt;div style=&quot;font-size: 16px;&quot;&gt;- id&lt;div style=&quot;font-size: 16px;&quot;&gt;- phone_number&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;- amount&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;- winner_announced&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="HuYdQWlDdihzWlvmT8ts-8">
           <mxGeometry x="10" y="50" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-11" value="winliberia.db" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="447.5" y="585" width="75" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HuYdQWlDdihzWlvmT8ts-8" target="HuYdQWlDdihzWlvmT8ts-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-17" value="SMPP Connection" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="760" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-18" value="SMPP_HOST&lt;br&gt;&lt;div&gt;SMPP_PORT&lt;br&gt;&lt;/div&gt;&lt;div&gt;SYSTEM_ID&lt;br&gt;&lt;/div&gt;&lt;div&gt;PASSWORD&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="HuYdQWlDdihzWlvmT8ts-17">
+          <mxGeometry x="10" y="55" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HuYdQWlDdihzWlvmT8ts-17" target="HuYdQWlDdihzWlvmT8ts-11">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
