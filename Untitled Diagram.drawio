@@ -1,9 +1,46 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.1">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1290" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Diagram Structure (Linode)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Flask App&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Endpoints&lt;/strong&gt;:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;/send_sms&lt;/code&gt;: Handles SMS requests.&lt;/li&gt;&lt;li&gt;&lt;code&gt;/ussd_code/winliberia&lt;/code&gt;: Handles USSD requests.&lt;/li&gt;&lt;li&gt;&lt;code&gt;/api/phone_numbers&lt;/code&gt;: Retrieves phone numbers from the database.&lt;/li&gt;&lt;li&gt;&lt;code&gt;/callback&lt;/code&gt;: Handles callbacks from external services (e.g., payment confirmations).&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Database (SQLAlchemy)&lt;/strong&gt;:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;PhoneNumber model: Stores phone numbers, amounts, and whether a winner has been announced.&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Celery Worker&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Executes asynchronous tasks like sending SMS.&lt;/li&gt;&lt;li&gt;Communicates with Redis (used as a broker for message queuing).&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;SMPP (Short Message Peer-to-Peer Protocol)&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;SMPP Server&lt;/strong&gt;: Connects and binds to the SMPP server to send SMS.&lt;ul&gt;&lt;li&gt;Credentials: SYSTEM_ID, PASSWORD.&lt;/li&gt;&lt;li&gt;SMPP_HOST and SMPP_PORT define the connection details.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;USSD Logic&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The &lt;code&gt;/ussd_code/winliberia&lt;/code&gt; endpoint handles USSD requests, processing user inputs and returning appropriate responses based on menu selections (e.g., entering the draw or viewing results).&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Logging&lt;/strong&gt;:&lt;/p&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Logs critical information for debugging and monitoring purposes (e.g., connection errors, saved phone numbers, callback data).&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;h3&gt;&lt;strong&gt;Component Interaction&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;User Interaction&lt;/strong&gt;:&lt;ul&gt;&lt;li&gt;USSD and SMS services interact with users to receive inputs (e.g., lottery entries) and send confirmations.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Database&lt;/strong&gt;:&lt;ul&gt;&lt;li&gt;All user data (like phone numbers and amounts) are stored in the SQLite database using SQLAlchemy.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Task Processing&lt;/strong&gt;:&lt;ul&gt;&lt;li&gt;Celery processes long-running tasks like sending SMS, offloading these to background tasks to ensure smooth user interaction.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="250" height="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HuYdQWlDdihzWlvmT8ts-2" target="HuYdQWlDdihzWlvmT8ts-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="290" />
+              <mxPoint x="440" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-2" value="API" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="50" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-3" value="Endpoints:&lt;div style=&quot;font-size: 16px;&quot;&gt;- /send_sms&lt;div style=&quot;font-size: 16px;&quot;&gt;- /ussd_code/winliberia&lt;div style=&quot;font-size: 16px;&quot;&gt;- /api/phone_numbers&lt;div style=&quot;font-size: 16px;&quot;&gt;- /callback &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="HuYdQWlDdihzWlvmT8ts-2">
+          <mxGeometry x="5" y="60" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-5" value="Celery Worker" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="320" width="275" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-6" value="Tasks:&lt;div style=&quot;font-size: 16px;&quot;&gt;- send_sms_task&lt;div style=&quot;font-size: 16px;&quot;&gt;- Connect to SMPP server for SMS&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="HuYdQWlDdihzWlvmT8ts-5">
+          <mxGeometry x="5" y="80" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.474;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="HuYdQWlDdihzWlvmT8ts-2" target="HuYdQWlDdihzWlvmT8ts-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="290" />
+              <mxPoint x="880" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-8" value="SQLAlchemy ORM " style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="320" width="290" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="HuYdQWlDdihzWlvmT8ts-10" value="PhoneNumber Model:&lt;div style=&quot;font-size: 16px;&quot;&gt;- id&lt;div style=&quot;font-size: 16px;&quot;&gt;- phone_number&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;- amount&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;- winner_announced&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="HuYdQWlDdihzWlvmT8ts-8">
+          <mxGeometry x="10" y="50" width="180" height="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
