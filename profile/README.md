@@ -4,7 +4,7 @@
 
 ## About Us
 
-Welcome to **WinLiberia**! 🎉 We're thrilled to have you here. WinLiberia is your ultimate destination for participating in thrilling draws and experiencing the excitement of winning.
+Welcome to **WINLIBERIA**! 🎉 We're thrilled to have you here. WinLiberia is your ultimate destination for participating in thrilling draws and experiencing the excitement of winning.
 
 Our platform offers a variety of draws where you can enter and stand a chance to win fantastic prizes. It’s simple, enjoyable, and who knows—today might just be your lucky day!
 
