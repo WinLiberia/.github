@@ -1,4 +1,4 @@
-# Welcome to WinLiberia!
+# Welcome to WINLIBERIA!
 
 ![WinLiberia Logo](https://via.placeholder.com/150) <!-- Replace with actual logo URL -->
 
